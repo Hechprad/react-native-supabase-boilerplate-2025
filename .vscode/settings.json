@@ -81,10 +81,10 @@
   // End of line
   "files.eol": "\n",
   // i18n
-  "i18n-ally.localesPaths": ["src/i18n", "src/i18n/locales"],
+  "i18n-ally.localesPaths": ["src/lib/i18n", "src/lib/i18n/locales"],
   "i18n-ally.pathMatcher": "{locale}.json",
-  "i18n-ally.displayLanguage": "pt-BR",
+  "i18n-ally.displayLanguage": "en-US",
   "i18n-ally.enabledParsers": ["json"],
-  "i18n-ally.sourceLanguage": "pt-BR",
+  "i18n-ally.sourceLanguage": "en-US",
   "i18n-ally.keystyle": "nested"
 }

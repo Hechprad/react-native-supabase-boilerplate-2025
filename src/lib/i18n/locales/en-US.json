@@ -1,20 +1,58 @@
 {
+  "alert": {
+    "emailCheck": "Please check your email!"
+  },
+  "buttons": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+  "links": {
+    "signUp": "Don't have an account? Sign up"
+  },
   "fields": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "errors": {
+        "required": "The email is required",
+        "invalid": "Invalid email"
+      }
+    },
     "firstName": {
       "label": "First Name",
-      "placeholder": "Enter your first name"
-    },
-    "pass": {
-      "label": "Password",
-      "placeholder": "Enter your password"
+      "placeholder": "Enter your first name",
+      "errors": {
+        "required": "The first name is required",
+        "minLength": "The first name must be at least 2 characters"
+      }
     },
     "lastName": {
       "label": "Surname",
-      "placeholder": "Enter your surname"
+      "placeholder": "Enter your surname",
+      "errors": {
+        "required": "The surname is required",
+        "minLength": "The surname must be at least 2 characters"
+      }
     },
-    "email": {
-      "label": "E-mail",
-      "placeholder": "Enter your email"
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "errors": {
+        "required": "The password is required",
+        "minLength": "The password must be at least 6 characters",
+        "uppercase": "The password must contain at least one uppercase letter",
+        "lowercase": "The password must contain at least one lowercase letter",
+        "specialCharacter": "The password must contain at least one special character"
+      }
+    },
+    "global": {
+      "required": "Required field"
+    }
+  },
+  "errors": {},
+  "pages": {
+    "signUp": {
+      "title": "Create an account"
     }
   }
 }

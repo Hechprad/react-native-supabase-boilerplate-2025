@@ -1,5 +1,6 @@
 import { Link, router } from 'expo-router';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Alert,
   GestureResponderEvent,
@@ -18,6 +19,7 @@ import loginPageStyles from './styles';
 
 export default function LoginPage() {
   const { user } = AuthContext.useAuth();
+  const { t } = useTranslation();
 
   // Inputs values
   const [email, setEmail] = useState('');
@@ -65,21 +67,21 @@ export default function LoginPage() {
           </View>
           <View style={loginPageStyles.form}>
             <MyAppEmailInput
-              label="Email"
+              label={t('fields.email.label')}
+              placeholder={t('fields.email.placeholder')}
               onChangeText={setEmail}
-              placeholder="Digite seu e-mail"
               value={email}
             />
             <MyAppPasswordInput
-              label="Senha"
+              label={t('fields.password.label')}
               onChangeText={setPassword}
-              placeholder="Digite sua senha"
+              placeholder={t('fields.password.placeholder')}
               value={password}
             />
 
             <ActionButton
               onPress={handleSignIn}
-              text="Acessar"
+              text={t('buttons.signIn')}
               disabled={!email || !password}
             />
 
@@ -87,9 +89,7 @@ export default function LoginPage() {
               href="/(public)/(auth)/signup/page"
               style={loginPageStyles.link}
             >
-              <Text style={loginPageStyles.linkText}>
-                Ainda não possui uma conta? Cadastre-se
-              </Text>
+              <Text style={loginPageStyles.linkText}>{t('links.signUp')}</Text>
             </Link>
           </View>
         </View>

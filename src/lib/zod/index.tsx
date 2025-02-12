@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import i18n from '@/lib/i18n';
 
 const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
   if (
@@ -6,7 +7,7 @@ const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
     issue.received === 'undefined' &&
     ctx.defaultError === 'Required'
   ) {
-    return { message: 'Campo obrigatório' };
+    return { message: i18n.t('fields.global.required') };
   }
   return { message: ctx.defaultError };
 };

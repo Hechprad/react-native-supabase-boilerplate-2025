@@ -27,13 +27,15 @@ export default function SignUp() {
   const [pending, setPending] = useState(false);
 
   const schema = z.object({
-    name: z.string().min(2, 'O nome deve ter pelo menos 2 caracteres'),
-    lastName: z.string().min(2, 'O sobrenome deve ter pelo menos 2 caracteres'),
-    email: z.string().email('E-mail inválido'),
-    password: z.string().min(6, 'A senha deve ter pelo menos 6 caracteres'),
-    // .regex(/[A-Z]/, 'A senha deve conter pelo menos uma letra maiúscula')
-    // .regex(/[a-z]/, 'A senha deve conter pelo menos uma letra minúscula')
-    // .regex(/[\W_]/, 'A senha deve conter pelo menos um caractere especial')
+    name: z.string().min(2, t('fields.firstName.errors.minLength')),
+    lastName: z.string().min(2, t('fields.lastName.errors.minLength')),
+    email: z.string().email(t('fields.email.errors.invalid')),
+    password: z
+      .string()
+      .min(6, t('fields.password.errors.minLength'))
+      .regex(/[A-Z]/, t('fields.password.errors.uppercase'))
+      .regex(/[a-z]/, t('fields.password.errors.lowercase'))
+      .regex(/[\W_]/, t('fields.password.errors.specialCharacter')),
   });
 
   const {
@@ -68,7 +70,7 @@ export default function SignUp() {
       return;
     }
 
-    if (!session) Alert.alert('Por favor, verifique seu e-mail!');
+    if (!session) Alert.alert(t('alert.emailCheck'));
 
     router.replace('/(public)/(auth)/signin/page');
   }
@@ -86,7 +88,7 @@ export default function SignUp() {
               arrow="arrow-back"
               onPress={() => router.back()}
             />
-            <Text style={signUpStyles.slogan}>Criar uma conta</Text>
+            <Text style={signUpStyles.slogan}>{t('pages.signUp.title')}</Text>
           </View>
           <View style={signUpStyles.form}>
             <Controller
@@ -138,9 +140,9 @@ export default function SignUp() {
               name="password"
               render={({ field: { onChange, ref, ...rest } }) => (
                 <MyAppPasswordInput
-                  label={t('fields.pass.label')}
+                  label={t('fields.password.label')}
                   onChangeText={onChange}
-                  placeholder={t('fields.pass.placeholder')}
+                  placeholder={t('fields.password.placeholder')}
                   textContentType="newPassword"
                   errorMessage={errors.password?.message}
                   {...rest}
@@ -149,7 +151,7 @@ export default function SignUp() {
             />
             <ActionButton
               onPress={handleSubmit(handleSignup)}
-              text="Cadastrar"
+              text={t('buttons.signUp')}
               disabled={
                 !watch('name') ||
                 !watch('lastName') ||

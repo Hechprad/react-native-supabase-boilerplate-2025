@@ -1,20 +1,58 @@
 {
+  "alert": {
+    "emailCheck": "Por favor, verifique seu e-mail!"
+  },
+  "buttons": {
+    "signIn": "Acessar",
+    "signUp": "Cadastrar"
+  },
+  "links": {
+    "signUp": "Ainda não possui uma conta? Cadastre-se"
+  },
   "fields": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Digite seu e-mail",
+      "errors": {
+        "required": "O email é obrigatório",
+        "invalid": "E-mail inválido"
+      }
+    },
     "firstName": {
       "label": "Nome",
-      "placeholder": "Digite seu nome"
+      "placeholder": "Digite seu nome",
+      "errors": {
+        "required": "O nome é obrigatório",
+        "minLength": "O nome deve ter no mínimo 2 caracteres"
+      }
     },
     "lastName": {
       "label": "Sobrenome",
-      "placeholder": "Digite seu sobrenome"
+      "placeholder": "Digite seu sobrenome",
+      "errors": {
+        "required": "O sobrenome é obrigatório",
+        "minLength": "O sobrenome deve ter no mínimo 2 caracteres"
+      }
     },
-    "pass": {
+    "password": {
       "label": "Senha",
-      "placeholder": "Digite sua senha"
+      "placeholder": "Digite sua senha",
+      "errors": {
+        "required": "A senha é obrigatória",
+        "minLength": "A senha deve ter no mínimo 6 caracteres",
+        "uppercase": "A senha deve conter pelo menos uma letra maiúscula",
+        "lowercase": "A senha deve conter pelo menos uma letra minúscula",
+        "specialCharacter": "A senha deve conter pelo menos um caractere especial"
+      }
     },
-    "email": {
-      "label": "Email",
-      "placeholder": "Digite seu e-mail"
+    "global": {
+      "required": "Campo obrigatório"
+    }
+  },
+  "errors": {},
+  "pages": {
+    "signUp": {
+      "title": "Criar uma conta"
     }
   }
 }
