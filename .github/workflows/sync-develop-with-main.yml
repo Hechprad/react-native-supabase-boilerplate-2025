@@ -27,3 +27,5 @@ jobs:
           git checkout develop
           git rebase main
           git push origin develop --force-with-lease
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT_HECH }}
