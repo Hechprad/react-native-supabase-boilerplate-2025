@@ -8,6 +8,10 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+      pull-requests: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,5 +31,3 @@ jobs:
           git checkout develop
           git rebase main
           git push origin develop --force-with-lease
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT_HECH }}
