@@ -1,2 +1,2 @@
 echo '🐕 Husky pre-push => test:no-watch'
-# npm run test:no-watch
+npm run test:no-watch

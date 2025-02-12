@@ -1,0 +1,30 @@
+name: Test on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    name: Run Lint and Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint-staged
+        run: npx lint-staged
+
+      - name: Run Tests with Jest
+        run: npm run test:no-watch -- --ci --coverage

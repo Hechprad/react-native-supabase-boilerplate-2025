@@ -46,8 +46,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "test:coverage": "jest --coverage --watchAll=false --no-cache",
-    "test:no-watch": "jest --watchAll=false",
+    "test:coverage": "jest --coverage --watchAll=false --passWithNoTests --no-cache",
+    "test:no-watch": "jest --watchAll=false --passWithNoTests",
     "lint": "eslint .",
     "prettier": "prettier . --write",
     "prepare": "husky"
