@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "naumovs.color-highlight",
+    "formulahendry.auto-rename-tag",
+    "lokalise.i18n-ally"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "fields": {
+    "firstName": {
+      "label": "First Name",
+      "placeholder": "Enter your first name"
+    },
+    "pass": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    },
+    "lastName": {
+      "label": "Surname",
+      "placeholder": "Enter your surname"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Enter your email"
+    }
+  }
+}

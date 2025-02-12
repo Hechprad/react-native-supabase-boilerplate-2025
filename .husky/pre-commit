@@ -1,0 +1,2 @@
+echo '🐕 Husky pre-commit => lint-stage'
+npx lint-staged

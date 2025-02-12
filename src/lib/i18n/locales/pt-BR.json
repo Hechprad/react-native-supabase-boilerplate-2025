@@ -1,0 +1,20 @@
+{
+  "fields": {
+    "firstName": {
+      "label": "Nome",
+      "placeholder": "Digite seu nome"
+    },
+    "lastName": {
+      "label": "Sobrenome",
+      "placeholder": "Digite seu sobrenome"
+    },
+    "pass": {
+      "label": "Senha",
+      "placeholder": "Digite sua senha"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Digite seu e-mail"
+    }
+  }
+}

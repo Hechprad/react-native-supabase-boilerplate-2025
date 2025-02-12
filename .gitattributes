@@ -1,0 +1,51 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+Dockerfile text eol=lf
+*.config   text eol=lf
+*.css      text eol=lf
+*.dist     text eol=lf
+*.engine   text eol=lf
+*.html     text eol=lf
+*.inc      text eol=lf
+*.install  text eol=lf
+*.js       text eol=lf
+*.jsx      text eol=lf
+*.json     text eol=lf
+*.less     text eol=lf
+*.lock     text eol=lf
+*.map      text eol=lf
+*.md       text eol=lf
+*.module   text eol=lf
+*.php      text eol=lf
+*.po       text eol=lf
+*.profile  text eol=lf
+*.script   text eol=lf
+*.sh       text eol=lf
+*.sql      text eol=lf
+*.svg      text eol=lf
+*.theme    text eol=lf
+*.twig     text eol=lf
+*.txt      text eol=lf
+*.xml      text eol=lf
+*.yml      text eol=lf
+*.ts       text eol=lf
+*.tsx      text eol=lf
+
+# Define binary file attributes.
+# - Do not treat them as text.
+# - Include binary diff in patches instead of "binary files differ."
+*.eot     -text diff
+*.exe     -text diff
+*.gif     -text diff
+*.gz      -text diff
+*.ico     -text diff
+*.jpeg    -text diff
+*.jpg     -text diff
+*.otf     -text diff
+*.phar    -text diff
+*.png     -text diff
+*.svgz    -text diff
+*.ttf     -text diff
+*.woff    -text diff
+*.woff2   -text diff
