@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Git
         run: |
@@ -20,8 +22,8 @@ jobs:
       - name: Fetch all branches
         run: git fetch --all
 
-      - name: Merge main into develop
+      - name: Rebase develop onto main
         run: |
           git checkout develop
-          git merge main --no-edit
-          git push origin develop
+          git rebase main
+          git push origin develop --force-with-lease
