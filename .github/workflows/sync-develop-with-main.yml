@@ -1,0 +1,27 @@
+name: Sync develop with main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Jorge Hecherat"
+          git config --global user.email "hecherat@gmail.com"
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Merge main into develop
+        run: |
+          git checkout develop
+          git merge main --no-edit
+          git push origin develop
