@@ -1,0 +1,20 @@
+name: React Native Supabase Boilerplate 2025
+description: A starter kit for React Native 0.76+ with Expo, TypeScript, and Supabase auth.
+topics:
+  - react-native
+  - react-navigation
+  - expo
+  - supabase
+  - supabase-auth
+  - typescript
+  - jest
+  - zod
+  - eslint
+  - husky
+  - lint-staged
+  - prettier
+  - github-actions
+  - mobile
+  - boilerplate
+  - boilerplate-template
+  - starter-kit
