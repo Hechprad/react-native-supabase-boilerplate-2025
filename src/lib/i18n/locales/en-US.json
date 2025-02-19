@@ -51,8 +51,17 @@
   },
   "errors": {},
   "pages": {
+    "notFound": {
+      "title": "This screen doesn't exist.",
+      "link": "Go to home screen!"
+    },
     "signUp": {
       "title": "Create an account"
+    },
+    "update": {
+      "title": "A new version is available!",
+      "message": "Update the app to continue using with the new features and improvements!",
+      "button": "Update"
     }
   }
 }
