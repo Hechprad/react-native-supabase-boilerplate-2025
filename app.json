@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.neighborhoodpicks.app"
     },
     "web": {
       "bundler": "metro",

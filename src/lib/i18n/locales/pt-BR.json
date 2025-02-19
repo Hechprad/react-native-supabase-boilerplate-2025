@@ -51,8 +51,17 @@
   },
   "errors": {},
   "pages": {
+    "notFound": {
+      "title": "Esta tela não existe.",
+      "link": "Ir para a tela inicial!"
+    },
     "signUp": {
       "title": "Criar uma conta"
+    },
+    "update": {
+      "title": "Uma nova versão está disponível!",
+      "message": "Atualize o aplicativo para continuar utilizando com as novidades e melhorias!",
+      "button": "Atualizar"
     }
   }
 }
