@@ -35,6 +35,8 @@ export default [
       'react-native/no-inline-styles': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'error',
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
     },
   },
   {

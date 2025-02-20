@@ -1,12 +1,14 @@
 {
   "alert": {
-    "emailCheck": "Please check your email!"
+    "emailCheck": "Please check your email!",
+    "passwordUpdated": "Password changed successfully!"
   },
   "buttons": {
     "signIn": "Sign In",
     "signUp": "Sign Up"
   },
   "links": {
+    "forgotPassword": "Forgot password",
     "signUp": "Don't have an account? Sign up"
   },
   "fields": {
@@ -51,6 +53,10 @@
   },
   "errors": {},
   "pages": {
+    "forgotPassword": {
+      "title": "Recover password",
+      "button": "Send"
+    },
     "notFound": {
       "title": "This screen doesn't exist.",
       "link": "Go to home screen!"
@@ -61,6 +67,10 @@
     "update": {
       "title": "A new version is available!",
       "message": "Update the app to continue using with the new features and improvements!",
+      "button": "Update"
+    },
+    "updatePassword": {
+      "title": "Update password",
       "button": "Update"
     }
   }

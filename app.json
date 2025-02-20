@@ -14,7 +14,20 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "intentFilters": [
+          {
+            "action": "VIEW",
+            "data": [
+              {
+                "scheme": "https",
+                "host": "localhost",
+                "pathPrefix": "/updatePassword/page"
+              }
+            ],
+            "category": ["BROWSABLE", "DEFAULT"]
+          }
+        ]
       },
       "package": "com.neighborhoodpicks.app"
     },

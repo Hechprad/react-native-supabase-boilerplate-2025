@@ -1,12 +1,14 @@
 {
   "alert": {
-    "emailCheck": "Por favor, verifique seu e-mail!"
+    "emailCheck": "Por favor, verifique seu e-mail!",
+    "passwordUpdated": "Senha alterada com sucesso!"
   },
   "buttons": {
     "signIn": "Acessar",
     "signUp": "Cadastrar"
   },
   "links": {
+    "forgotPassword": "Esqueci minha senha",
     "signUp": "Ainda não possui uma conta? Cadastre-se"
   },
   "fields": {
@@ -51,6 +53,10 @@
   },
   "errors": {},
   "pages": {
+    "forgotPassword": {
+      "title": "Recuperar senha",
+      "button": "Enviar"
+    },
     "notFound": {
       "title": "Esta tela não existe.",
       "link": "Ir para a tela inicial!"
@@ -61,6 +67,10 @@
     "update": {
       "title": "Uma nova versão está disponível!",
       "message": "Atualize o aplicativo para continuar utilizando com as novidades e melhorias!",
+      "button": "Atualizar"
+    },
+    "updatePassword": {
+      "title": "Atualizar senha",
       "button": "Atualizar"
     }
   }

@@ -1,14 +1,7 @@
 import { Link, router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Alert,
-  GestureResponderEvent,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+import { Alert, SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 import AuthContext from '@/contexts/auth';
 import { ActionButton } from '@/components/buttons';
@@ -25,7 +18,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  async function handleSignIn(event: GestureResponderEvent) {
+  async function handleSignIn() {
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -53,6 +46,7 @@ export default function LoginPage() {
     <SafeAreaView style={loginPageStyles.safeArea}>
       <ScrollView
         // force the scrollView to occupy the entire screen
+        // eslint-disable-next-line react-native/no-inline-styles
         contentContainerStyle={{ flexGrow: 1 }}
         style={loginPageStyles.scrollView}
       >
@@ -78,6 +72,15 @@ export default function LoginPage() {
               placeholder={t('fields.password.placeholder')}
               value={password}
             />
+
+            <Link
+              href="/(public)/(auth)/forgotPassword/page"
+              style={loginPageStyles.linkForgotPass}
+            >
+              <Text style={loginPageStyles.linkText}>
+                {t('links.forgotPassword')}
+              </Text>
+            </Link>
 
             <ActionButton
               onPress={handleSignIn}
