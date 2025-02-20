@@ -62,7 +62,6 @@
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "@supabase/supabase-js": "^2.48.1",
-    "@types/aes-js": "^3.1.4",
     "aes-js": "^3.1.2",
     "expo": "~52.0.31",
     "expo-blur": "~14.0.3",
@@ -97,6 +96,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@types/aes-js": "^3.1.4",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.3.12",
     "@types/react-native-version-check": "^3.4.8",

@@ -79,6 +79,7 @@ export default function SignUp() {
     <SafeAreaView style={signUpStyles.safeArea}>
       <ScrollView
         // force the scrollView to occupy the entire screen
+        // eslint-disable-next-line react-native/no-inline-styles
         contentContainerStyle={{ flexGrow: 1 }}
         style={signUpStyles.scrollView}
       >

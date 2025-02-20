@@ -16,7 +16,7 @@ const loginPageStyles = StyleSheet.create({
     width: '100%',
   },
   buttonText: {
-    color: colors.white,
+    color: colors.palette.primary.softWhite,
     fontSize: 16,
     fontWeight: 'bold',
   },
@@ -26,7 +26,7 @@ const loginPageStyles = StyleSheet.create({
     paddingTop: 32,
   },
   form: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.palette.primary.softWhite,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
     flex: 1,
@@ -62,13 +62,18 @@ const loginPageStyles = StyleSheet.create({
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
+  linkForgotPass: {
+    color: colors.palette.primary.serenityBlue,
+    textAlign: 'right',
+    textDecorationLine: 'underline',
+    marginBottom: 16,
+  },
   linkText: {
     alignItems: 'center',
     color: colors.palette.primary.serenityBlue,
     fontSize: 16,
     fontWeight: 'bold',
     justifyContent: 'center',
-    textAlign: 'center',
   },
   logoText1: {
     color: colors.palette.primary.mintGreen,

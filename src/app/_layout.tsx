@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useFonts } from 'expo-font';
-import { router, Stack } from 'expo-router';
+import { router, Stack, usePathname } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import { useColorScheme } from 'react-native';
@@ -74,19 +74,22 @@ export default function RootLayout() {
 function MainLayout() {
   const { setAuth } = AuthContext.useAuth();
   const colorScheme = useColorScheme();
+  const pathname = usePathname();
 
   // Check if the user is authenticated and redirect to the Dashboard
   useEffect(() => {
-    supabase.auth.onAuthStateChange((event, session) => {
-      if (session) {
-        setAuth(session.user as CurrentUser);
-        router.replace('/(private)/dashboard/page');
-        return;
-      }
+    if (!pathname.includes('updatePassword')) {
+      supabase.auth.onAuthStateChange((event, session) => {
+        if (session) {
+          setAuth(session.user as CurrentUser);
+          router.replace('/(private)/dashboard/page');
+          return;
+        }
 
-      setAuth(null);
-      router.replace('/(public)/(auth)/signin/page');
-    });
+        setAuth(null);
+        router.replace('/(public)/(auth)/signin/page');
+      });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
